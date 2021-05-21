@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "835310346515",
+    "firebase_url": "https://jay-parker-payment-api.firebaseio.com",
+    "project_id": "jay-parker-payment-api",
+    "storage_bucket": "jay-parker-payment-api.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:835310346515:android:d8861d8241e2a8abf4fae6",
+        "android_client_info": {
+          "package_name": "com.jayparker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "835310346515-bg52thdl9cq48uqvfebuda8a94tcloh0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRMZtfLfPvent5KRjhgxVWmYnpSu-urZc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "835310346515-bg52thdl9cq48uqvfebuda8a94tcloh0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
