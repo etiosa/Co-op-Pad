@@ -6,6 +6,7 @@ class dashboardmenu extends StatelessWidget {
     Key key,
   }) : super(key: key);
 
+//swtich statement here
   @override
   Widget build(BuildContext context) {
     return Transform.translate(
@@ -75,14 +76,14 @@ class dashboardmenu extends StatelessWidget {
                   ))),
           InkWell(
               onTap: () {
-                print("Pay rent");
+                Navigator.pushNamed(context, '/dashboard/mainteance');
               },
               child: Container(
                   height: 120,
                   width: 120,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
-                    color: Colors.red,
+                    color: Colors.white,
                   ),
                   margin: const EdgeInsets.only(bottom: 100),
                   child: Column(

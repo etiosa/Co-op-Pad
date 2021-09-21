@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-import 'package:james_parker_app/model/HouseType.dart';
 
 import '/model/Address.dart';
 

@@ -1,31 +1,39 @@
+import 'package:cop_oppad/view/member/Legder.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:james_parker_app/view/member/Dashboard.dart';
 import "./Payment.dart";
 import "./Maintenance.dart";
+import 'Dashboard.dart';
 import 'Setting.dart';
+
 // need to change the import
 class ScreenNavigator extends StatefulWidget {
   @override
   _ScreenNavigatorState createState() => _ScreenNavigatorState();
 }
 
+void _nextPageNerxt() {
+  print('I was click');
+  //Nav
+}
+
 //route latter on
 
 class _ScreenNavigatorState extends State<ScreenNavigator> {
   int _selectedIndex = 0;
+
   final _screens = [
-     Dashboard(),
-   Setting(),
+    Dashboard(),
+    Setting(),
+   
     const Scaffold(
         body: Center(
-      child: Text('Notification'),
-    )),
+            child: ElevatedButton(
+      child: Text('Notification next pagee'),
+      onPressed: _nextPageNerxt,
+    ))),
     Maintenance(),
-    const Scaffold(
-        body: Center(
-      child: Text('Ledger'),
-    ))
+    Ledger()
   ];
 
   @override
@@ -62,6 +70,7 @@ class _ScreenNavigatorState extends State<ScreenNavigator> {
                 padding: const EdgeInsets.all(8.0),
                 child: const Icon(
                   FontAwesomeIcons.home,
+                  size: 16,
                   color: const Color.fromARGB(255, 107, 116, 130),
                 ),
               ),
@@ -70,6 +79,7 @@ class _ScreenNavigatorState extends State<ScreenNavigator> {
                 padding: const EdgeInsets.all(8.0),
                 child: const Icon(
                   FontAwesomeIcons.home,
+                     size: 18,
                   color: const Color.fromARGB(255, 121, 113, 234),
                 ),
               ),
@@ -80,6 +90,7 @@ class _ScreenNavigatorState extends State<ScreenNavigator> {
                   padding: const EdgeInsets.all(8.0),
                   child: const Icon(
                     FontAwesomeIcons.cog,
+                       size: 16,
                     color: const Color.fromARGB(255, 107, 116, 130),
                   ),
                 ),
@@ -88,6 +99,7 @@ class _ScreenNavigatorState extends State<ScreenNavigator> {
                   padding: const EdgeInsets.all(8.0),
                   child: const Icon(
                     FontAwesomeIcons.cog,
+                       size: 18,
                     color: const Color.fromARGB(255, 121, 113, 234),
                   ),
                 )),
@@ -96,6 +108,7 @@ class _ScreenNavigatorState extends State<ScreenNavigator> {
                   padding: const EdgeInsets.all(8.0),
                   child: const Icon(
                     FontAwesomeIcons.solidBell,
+                       size: 16,
                     color: const Color.fromARGB(255, 107, 116, 130),
                   ),
                 ),
@@ -104,6 +117,7 @@ class _ScreenNavigatorState extends State<ScreenNavigator> {
                   padding: const EdgeInsets.all(8.0),
                   child: const Icon(
                     FontAwesomeIcons.solidBell,
+                       size: 18,
                     color: const Color.fromARGB(255, 121, 113, 234),
                   ),
                 )),
@@ -112,6 +126,7 @@ class _ScreenNavigatorState extends State<ScreenNavigator> {
                   padding: const EdgeInsets.all(8.0),
                   child: const Icon(
                     FontAwesomeIcons.hammer,
+                       size: 16,
                     color: const Color.fromARGB(255, 107, 116, 130),
                   ),
                 ),
@@ -120,6 +135,7 @@ class _ScreenNavigatorState extends State<ScreenNavigator> {
                   padding: const EdgeInsets.all(8.0),
                   child: const Icon(
                     FontAwesomeIcons.hammer,
+                       size: 18,
                     color: const Color.fromARGB(255, 121, 113, 234),
                   ),
                 )),
@@ -128,6 +144,7 @@ class _ScreenNavigatorState extends State<ScreenNavigator> {
                   padding: const EdgeInsets.all(8.0),
                   child: const Icon(
                     FontAwesomeIcons.solidFile,
+                       size: 16,
                     color: const Color.fromARGB(255, 107, 116, 130),
                   ),
                 ),
@@ -136,6 +153,7 @@ class _ScreenNavigatorState extends State<ScreenNavigator> {
                   padding: const EdgeInsets.all(8.0),
                   child: const Icon(
                     FontAwesomeIcons.solidFile,
+                       size: 18,
                     color: const Color.fromARGB(255, 121, 113, 234),
                   ),
                 )),

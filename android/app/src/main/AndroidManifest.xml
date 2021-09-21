@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.james_parker_app">
    <application
-        android:label="james_parker_app"
+        android:label="Cop-op Pad"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

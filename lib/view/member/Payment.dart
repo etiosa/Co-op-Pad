@@ -1,6 +1,6 @@
+import 'package:cop_oppad/model/CreditCard_Model.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:james_parker_app/model/CreditCard_Model.dart';
 
 //coming from backend..
 //an array of payment
@@ -55,7 +55,8 @@ class Payment extends StatelessWidget {
                 print(_creditInformation[index].name);
                 print('selected');
               },
-              child: (Container(
+              child: (
+                Container(
                   margin: EdgeInsets.only(right: 10),
                   height: 199,
                   width: 344,

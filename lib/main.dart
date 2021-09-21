@@ -1,6 +1,12 @@
+import 'package:cop_oppad/view/member/Dashboard.dart';
+import 'package:cop_oppad/view/member/Maintenance.dart';
+import 'package:cop_oppad/view/member/New-Payment.dart';
+import 'package:cop_oppad/view/member/Setting-account.dart';
+import 'package:cop_oppad/view/member/Setting-emergency.dart';
+import 'package:cop_oppad/view/member/Setting-payment.dart';
+import 'package:cop_oppad/view/member/nav-screen.dart';
 import 'package:flutter/material.dart';
-import 'package:james_parker_app/view/member/Dashboard.dart';
-import 'package:james_parker_app/view/member/nav-screen.dart';
+
 import '../widgets/Adminwidgets.dart';
 import './routes/routes.dart';
 
@@ -37,11 +43,22 @@ class Running extends StatelessWidget {
 
     return MaterialApp(
       theme: ThemeData(fontFamily: 'Poppins'),
-      home: Scaffold(
-          body:
-
+     
               // mainAxisAlignment: MainAxisAlignment.center,
-              ScreenNavigator()),
+             // ScreenNavigator()),
+        initialRoute: '/',
+        routes: {
+        // When navigating to the "/" route, build the FirstScreen widget.
+        '/': (context) => Home(),
+        '/dashboard' :(context) => ScreenNavigator(),
+        '/dashboard/personalinformation': (context) =>SettingAccount(),
+        '/dashboard/paymentinformation': (context)=>SettingPayment(),
+        '/dashboard/emergency': (context)=>SettingEmergency(),
+        '/dashboard/addpayment': (context)=>AddNewPayment(),
+        '/dashboard/mainteance' : (context) =>Maintenance(),
+        // When navigating to the "/second" route, build the SecondScreen widget.
+       // '/second': (context) => const SecondScreen(),
+      },
 
       //  backgroundColor: JayParkercolors.secondaryTextFieldBackground),
     );

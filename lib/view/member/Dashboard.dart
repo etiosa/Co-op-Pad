@@ -17,7 +17,7 @@ class Dashboard extends StatelessWidget {
           
           actionsIconTheme: IconThemeData(
             color: Colors.white,
-            size: 25,
+            size: 20,
             
           ),
           backgroundColor: Color.fromARGB(255, 67, 83, 109),
@@ -147,6 +147,7 @@ class Dashboard extends StatelessWidget {
 
                                 ),
                                   onPressed: () {
+
                                     print("pay");
                                   },
                                   child: const Text('Pay')),

@@ -17,262 +17,163 @@ class _SettingState extends State<Setting> {
           left: true,
           child: Padding(
             padding: const EdgeInsets.only(top: 40.0, left: 20),
-            child: SingleChildScrollView(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 30.0, left: 20),
-                    child: Icon(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
                       Icons.arrow_back,
                       size: 40,
                     ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 20.0, right: 20.0),
-                    child: Padding(
-                      padding: const EdgeInsets.only(
-                          bottom: 50.0, left: 10, right: 10),
+                     Container(
+                        width: 100,
+                        height: 50,
+                        
+                      
+                          padding: EdgeInsets.only(bottom: 5, right:20),
+                          child: ElevatedButton(
+                            autofocus: true,
+                            style: ButtonStyle(
+                                elevation: MaterialStateProperty.all(0),
+                                backgroundColor: MaterialStateProperty.all(
+                                    Color.fromARGB(255, 121, 113, 234)),
+                                shape: MaterialStateProperty.all<
+                                        RoundedRectangleBorder>(
+                                    RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(50.0),
+                                ))),
+                            child: const Text('Sigout'),
+                            onPressed: () {
+                              // Navigator.pushNamed(context, '/dashboard');
+                              print("Signout");
+                            },
+                          ),
+                        )
+                  ],
+                ),
+                SizedBox(
+                  height: 30,
+                ),
+                Text(
+                  'Setting',
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 45),
+                ),
+                SizedBox(
+                  height: 50,
+                ),
+                Container(
+                    margin: EdgeInsets.only(bottom: 50),
+                    color: Color.fromARGB(255, 244, 244, 250),
+                    width: 370,
+                    height: 70,
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.pushNamed(
+                            context, '/dashboard/personalinformation');
+                      },
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text(
-                            'Account',
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 30),
+                          Padding(
+                            padding: const EdgeInsets.all(20.0),
+                            child: Text(
+                              "Personal Information",
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  color: Color.fromARGB(255, 57, 62, 70)),
+                            ),
                           ),
-                          ElevatedButton(
-                              onPressed: () {
-                                print('update');
-                              },
-                              child: Text('Update'))
+                          Icon(
+                            Icons.keyboard_arrow_right,
+                            color: Color.fromARGB(255, 224, 224, 249),
+                            size: 50,
+                          )
                         ],
                       ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 40.0, left: 10),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Container(
-                          height: 120,
-                          width: 120,
-                          margin: EdgeInsets.only(right: 50),
-                          decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              image: new DecorationImage(
-                                  image:
-                                      new AssetImage('assets/images/House.png'),
-                                  fit: BoxFit.cover)),
-                        ),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'John Joe',
-                              style: TextStyle(fontSize: 20, height: 1.5),
+                    )),
+                Container(
+                    margin: EdgeInsets.only(bottom: 50),
+                    color: Color.fromARGB(255, 244, 244, 250),
+                    width: 370,
+                    height: 70,
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.pushNamed(
+                            context, '/dashboard/paymentinformation');
+                      },
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(20.0),
+                            child: Text(
+                              "Payment",
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  color: Color.fromARGB(255, 57, 62, 70)),
                             ),
-                            Text(
-                              'Joe@gmail.com',
-                              style: TextStyle(fontSize: 20, height: 1.5),
+                          ),
+                          Icon(
+                            Icons.keyboard_arrow_right,
+                            color: Color.fromARGB(255, 224, 224, 249),
+                            size: 50,
+                          )
+                        ],
+                      ),
+                    )),
+                Container(
+                    margin: EdgeInsets.only(bottom: 50),
+                    color: Color.fromARGB(255, 244, 244, 250),
+                    width: 370,
+                    height: 70,
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.pushNamed(context, '/dashboard/emergency');
+                      },
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(20.0),
+                            child: Text(
+                              "Emergency contact",
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  color: Color.fromARGB(255, 57, 62, 70)),
                             ),
-                            Text(
-                              '111-333-4444',
-                              style: TextStyle(fontSize: 20, height: 1.5),
-                            )
-                          ],
-                        )
-                      ],
-                    ),
+                          ),
+                          Icon(
+                            Icons.keyboard_arrow_right,
+                            color: Color.fromARGB(255, 224, 224, 249),
+                            size: 50,
+                          )
+                        ],
+                      ),
+                    )),
+                Padding(
+                  padding: const EdgeInsets.only(left: 20.0, right: 20.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text('Auto-pay'),
+                      Switch.adaptive(
+                        value: true,
+                        onChanged: null,
+                      ),
+                    ],
                   ),
-                  ElevatedButton(
-                    onPressed: () {
-                      print('change picture');
-                    },
-                    child: Text('change picture'),
-                  ),
-                  const Padding(
-                    padding: const EdgeInsets.only(
-                        left: 15.0, right: 20.0, bottom: 40, top: 30),
-                    child: const TextField(
-                      obscureText: false,
-                      // autofocus: ,
-
-                      decoration: const InputDecoration(
-                          enabledBorder: const UnderlineInputBorder(
-                              borderSide: const BorderSide(
-                                  color: const Color.fromARGB(255, 57, 62, 70),
-                                  width: 2,
-                                  style: BorderStyle.solid)),
-                          labelText: 'First Name',
-                          labelStyle: const TextStyle(
-                              color: Colors.black,
-                              fontFamily: 'Poppins',
-                              fontSize: 14,
-                              height: 1)),
-                    ),
-                  ),
-                  const Padding(
-                    padding: const EdgeInsets.only(
-                        left: 15.0, right: 20.0, bottom: 40),
-                    child: const TextField(
-                      obscureText: false,
-                      // autofocus: ,
-
-                      decoration: const InputDecoration(
-                          enabledBorder: const UnderlineInputBorder(
-                              borderSide: const BorderSide(
-                                  color: const Color.fromARGB(255, 57, 62, 70),
-                                  width: 2,
-                                  style: BorderStyle.solid)),
-                          labelText: 'Last Name',
-                          labelStyle: const TextStyle(
-                              color: Colors.black,
-                              fontFamily: 'Poppins',
-                              fontSize: 14,
-                              height: 1)),
-                    ),
-                  ),
-                  const Padding(
-                    padding: const EdgeInsets.only(
-                        left: 15.0, right: 20.0, bottom: 40),
-                    child: const TextField(
-                      obscureText: false,
-                      // autofocus: ,
-
-                      decoration: const InputDecoration(
-                          enabledBorder: const UnderlineInputBorder(
-                              borderSide: const BorderSide(
-                                  color: const Color.fromARGB(255, 57, 62, 70),
-                                  width: 2,
-                                  style: BorderStyle.solid)),
-                          labelText: 'Email',
-                          labelStyle: const TextStyle(
-                              color: Colors.black,
-                              fontFamily: 'Poppins',
-                              fontSize: 14,
-                              height: 1)),
-                    ),
-                  ),
-                  const Padding(
-                    padding: const EdgeInsets.only(left: 15.0, right: 20.0),
-                    child: const TextField(
-                      obscureText: false,
-                      // autofocus: ,
-
-                      decoration: const InputDecoration(
-                          enabledBorder: const UnderlineInputBorder(
-                              borderSide: const BorderSide(
-                                  color: const Color.fromARGB(255, 57, 62, 70),
-                                  width: 2,
-                                  style: BorderStyle.solid)),
-                          labelText: 'Phone Number',
-                          labelStyle: const TextStyle(
-                              color: Colors.black,
-                              fontFamily: 'Poppins',
-                              fontSize: 14,
-                              height: 1)),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 50.0, bottom: 40),
+                ),
+                Container(
+                    margin: EdgeInsets.only(left: 20, top: 20),
+                    width: 370,
                     child: Text(
-                      'Emergency Contact',
-                      style: TextStyle(
-                          fontSize: 30,
-                          fontWeight: FontWeight.bold,
-                          color: Color.fromARGB(255, 16, 16, 16)),
-                    ),
-                  ),
-                  const Padding(
-                    padding: const EdgeInsets.only(
-                        left: 15.0, right: 20.0, bottom: 40, top: 40),
-                    child: const TextField(
-                      obscureText: false,
-                      autofocus: false,
-                      // autofocus: ,
-
-                      decoration: const InputDecoration(
-                          enabledBorder: const UnderlineInputBorder(
-                              borderSide: const BorderSide(
-                                  color: const Color.fromARGB(255, 57, 62, 70),
-                                  width: 2,
-                                  style: BorderStyle.solid)),
-                          labelText: 'First Name',
-                          labelStyle: const TextStyle(
-                              color: Color.fromARGB(255, 16, 16, 16),
-                              fontFamily: 'Poppins',
-                              fontSize: 14,
-                              height: 1)),
-                    ),
-                  ),
-                  const Padding(
-                    padding: const EdgeInsets.only(
-                        left: 15.0, right: 20.0, bottom: 40),
-                    child: const TextField(
-                      obscureText: false,
-                      // autofocus: ,
-
-                      decoration: const InputDecoration(
-                          enabledBorder: const UnderlineInputBorder(
-                              borderSide: const BorderSide(
-                                  color: const Color.fromARGB(255, 57, 62, 70),
-                                  width: 2,
-                                  style: BorderStyle.solid)),
-                          labelText: 'Last Name',
-                          labelStyle: const TextStyle(
-                              color: Colors.black,
-                              fontFamily: 'Poppins',
-                              fontSize: 14,
-                              height: 1)),
-                    ),
-                  ),
-                  const Padding(
-                    padding: const EdgeInsets.only(
-                        left: 15.0, right: 20.0, bottom: 40),
-                    child: const TextField(
-                      obscureText: false,
-                      // autofocus: ,
-
-                      decoration: const InputDecoration(
-                          enabledBorder: const UnderlineInputBorder(
-                              borderSide: const BorderSide(
-                                  color: const Color.fromARGB(255, 57, 62, 70),
-                                  width: 2,
-                                  style: BorderStyle.solid)),
-                          labelText: 'Email',
-                          labelStyle: const TextStyle(
-                              color: Colors.black,
-                              fontFamily: 'Poppins',
-                              fontSize: 14,
-                              height: 1)),
-                    ),
-                  ),
-                  const Padding(
-                    padding: const EdgeInsets.only(
-                        left: 15.0, right: 20.0, bottom: 40),
-                    child: const TextField(
-                      obscureText: false,
-                      // autofocus: ,
-
-                      decoration: const InputDecoration(
-                          enabledBorder: const UnderlineInputBorder(
-                              borderSide: const BorderSide(
-                                  color: const Color.fromARGB(255, 57, 62, 70),
-                                  width: 2,
-                                  style: BorderStyle.solid)),
-                          labelText: 'Phone Number',
-                          labelStyle: const TextStyle(
-                              color: Colors.black,
-                              fontFamily: 'Poppins',
-                              fontSize: 14,
-                              height: 1)),
-                    ),
-                  ),
-                ],
-              ),
+                      "Payment will be withdraw automatically when rent is due",
+                      style: TextStyle(fontSize: 12),
+                    )),
+              ],
             ),
           ),
         ));
